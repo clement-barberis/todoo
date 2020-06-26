@@ -1,0 +1,4 @@
+<div class="tasks-layout">
+  <app-task *ngFor="let task of this.tasks; let i = index" [task]="task" (deleteTaskEvent)="deleteTask($event)" ></app-task>
+
+</div>

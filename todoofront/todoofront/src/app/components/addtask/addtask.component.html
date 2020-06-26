@@ -1,0 +1,18 @@
+<div fxLayoutAlign="center center" fxFlexFill class="main-div">
+  <mat-card fxFlex="100">
+    <form fxLayoutAlign="stretch" fxLayout="column" class="login-form" [formGroup]="formGroup" (ngSubmit)="addTask()">
+      <mat-form-field >
+        <mat-label>Titre</mat-label>
+        <input matInput placeholder="Ex. Lorem lorem lorem" formControlName="title" >
+      </mat-form-field>
+
+      <mat-form-field >
+        <mat-label>Commentaires</mat-label>
+        <textarea rows="5" matInput  placeholder="Ex : Lorem lorem lorem" formControlName="comment" >
+        </textarea >
+      </mat-form-field>
+      <button mat-raised-button type="submit">Ajouter</button>
+    </form>
+  </mat-card>
+</div>
+

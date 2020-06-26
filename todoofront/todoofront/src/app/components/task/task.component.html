@@ -1,0 +1,12 @@
+<mat-card class="task-card">
+  <mat-card-header>
+    <mat-card-title><mat-checkbox [checked]="this.task.done" (change)="toggleDone()" class="example-margin">{{ this.task.title }}</mat-checkbox></mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    {{ this.task.comment }}
+  </mat-card-content>
+  <mat-card-actions fxLayoutAlign="space-between center">
+    <span style="margin-left: 20px">crée le : {{ this.date.toLocaleDateString() }} - {{ this.date.toLocaleTimeString() }}</span>
+    <button mat-button color="primary" (click)="delete()" >SUPPRIMER</button>
+  </mat-card-actions>
+</mat-card>
