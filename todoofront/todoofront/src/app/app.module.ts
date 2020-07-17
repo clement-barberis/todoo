@@ -14,14 +14,17 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import {HomeComponent} from './components/home/home.component';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { HomeComponent } from './components/home/home.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { TaskComponent } from './components/task/task.component';
-import {MatCheckboxModule} from '@angular/material/checkbox';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { TasksComponent } from './components/tasks/tasks.component';
 import { AddtaskComponent } from './components/addtask/addtask.component';
 
+
+import { CommonModule } from '@angular/common';
+import { ToastrModule } from 'ngx-toastr';
 
 
 @NgModule({
@@ -47,7 +50,9 @@ import { AddtaskComponent } from './components/addtask/addtask.component';
     FormsModule,
     ReactiveFormsModule,
     MatIconModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    CommonModule,
+    ToastrModule.forRoot(), // ToastrModule added
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

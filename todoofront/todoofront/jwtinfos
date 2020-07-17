@@ -1,0 +1,16 @@
+ENCRYPTION KEY GENERATION FOR JWT
+First, make a new directory to hold the keys:
+
+mkdir var/jwt
+
+Next, copy the second line to create a private key, but change its path to the var/jwt directory:
+
+openssl genrsa -out var/jwt/private.pem -aes256 4096
+
+This asks you for a password - give it one! It adds another layer of security in case somebody gets your private key. I'll use happyapi. Perfect!
+
+Last step: copy the final line and remove app at the beginning and the end to point to the var/jwt directory:
+
+openssl rsa -pubout -in var/jwt/private.pem -out var/jwt/public.pem
+
+PASSPHRASE : algo
